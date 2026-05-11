@@ -4,6 +4,7 @@ interface StackItem {
   name: string;
   color: string;
   letter: string;
+  level?: number;
 }
 
 interface StackSectionProps {
@@ -23,7 +24,16 @@ const item = {
   show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.4, ease: [0.34, 1.56, 0.64, 1] as [number, number, number, number] } },
 };
 
-export default function StackSection({ stack }: StackSectionProps) {
+const defaultStack: StackItem[] = [
+  { name: "React", color: "#61DAFB", letter: "R", level: 95 },
+  { name: "Node", color: "#3C873A", letter: "N", level: 90 },
+  { name: "TS", color: "#3178C6", letter: "T", level: 92 },
+  { name: "Mongo", color: "#10AA50", letter: "M", level: 80 },
+  { name: "PG", color: "#336791", letter: "P", level: 85 },
+  { name: "AI", color: "#A855F7", letter: "A", level: 88 },
+];
+
+export default function StackSection({ stack = defaultStack }: StackSectionProps) {
   return (
     <>
       <h3 className="text-2xl font-bold tracking-tight m-0 mb-4 text-white">
@@ -33,7 +43,7 @@ export default function StackSection({ stack }: StackSectionProps) {
         variants={container}
         initial="hidden"
         animate="show"
-        className="flex flex-wrap gap-2"
+        className="flex flex-wrap gap-2 mb-4"
       >
         {stack.map((s) => (
           <motion.div
@@ -47,6 +57,28 @@ export default function StackSection({ stack }: StackSectionProps) {
           </motion.div>
         ))}
       </motion.div>
+
+      {stack.some((s) => s.level !== undefined) && (
+        <div className="space-y-2">
+          {stack.map((s) => (
+            <div key={s.name}>
+              <div className="flex justify-between text-xs font-medium text-white/80 mb-1">
+                <span>{s.name}</span>
+                <span>{s.level}%</span>
+              </div>
+              <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: `${s.level}%` }}
+                  transition={{ duration: 0.8, delay: 0.3, ease: [0.34, 1.56, 0.64, 1] }}
+                  className="h-full rounded-full"
+                  style={{ background: s.color }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 }

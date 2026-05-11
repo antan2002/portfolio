@@ -100,6 +100,78 @@
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 999px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
 
+/* ──────────────────────────────────────── */
+/* Responsive bento grid                    */
+/* ──────────────────────────────────────── */
+.bento-grid {
+  display: grid;
+  gap: 0.625rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "rail"
+    "stack"
+    "projects"
+    "master"
+    "contact"
+    "stats";
+}
+
+.bento-rail { grid-area: rail; }
+
+@media (min-width: 640px) {
+  .bento-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "rail rail"
+      "stack projects"
+      "master projects"
+      "contact stats";
+  }
+}
+
+@media (min-width: 768px) {
+  .bento-grid {
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+      "rail stack"
+      "rail projects"
+      "master projects"
+      "contact stats";
+  }
+}
+
+@media (min-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: 220px 1fr 1fr;
+    grid-template-areas:
+      "rail projects stack"
+      "rail projects master"
+      "rail contact stats";
+  }
+}
+
+@media (min-width: 1280px) {
+  .bento-grid {
+    grid-template-columns: 240px 1fr 1fr;
+  }
+}
+
+/* ──────────────────────────────────────── */
+/* Theme transition                           */
+/* ──────────────────────────────────────── */
+html {
+  transition: color-scheme 0.3s ease;
+}
+
+*, *::before, *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Light theme overrides for dark-only components */
+:root:not(.dark) .bento-card-inverted {
+  --bv-text: #000000;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

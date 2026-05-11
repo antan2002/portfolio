@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 
 interface SidebarProps {
   onMoreAboutMe: () => void;
@@ -18,7 +19,7 @@ export default function Sidebar({ onMoreAboutMe }: SidebarProps) {
           AR
         </div>
         <div className="leading-tight">
-          <div className="text-xl font-extrabold tracking-tight text-white">
+          <div className="text-xl font-extrabold tracking-tight text-[var(--bv-text)]">
             ANTAN R.
           </div>
           <div className="text-[11px] font-medium tracking-[0.12em] text-[var(--bv-text-3)] uppercase">
@@ -32,13 +33,21 @@ export default function Sidebar({ onMoreAboutMe }: SidebarProps) {
         I specialize in crafting AI-powered, performant web experiences. With a passion for clean architectures and fast feedback loops, I turn fuzzy product ideas into shipped, delightful interfaces across the modern web.
       </p>
 
-      {/* CTA */}
-      <button
-        onClick={onMoreAboutMe}
-        className="w-fit px-6 py-3 rounded-full border border-white/10 bg-white/5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
-      >
-        More about Me
-      </button>
+      {/* CTA + Navigation */}
+      <div className="flex flex-wrap gap-2">
+        <button
+          onClick={onMoreAboutMe}
+          className="w-fit px-5 py-2.5 rounded-full border border-white/10 bg-white/5 text-sm font-semibold text-[var(--bv-text)] transition-all duration-300 hover:bg-white/10 hover:border-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+        >
+          More about Me
+        </button>
+        <Link
+          to="/about"
+          className="w-fit px-5 py-2.5 rounded-full border border-white/10 bg-white/5 text-sm font-semibold text-[var(--bv-text)] transition-all duration-300 hover:bg-white/10 hover:border-white/20"
+        >
+          About
+        </Link>
+      </div>
 
       {/* Socials */}
       <div className="flex gap-2">
@@ -69,9 +78,9 @@ export default function Sidebar({ onMoreAboutMe }: SidebarProps) {
       <div className="flex flex-col gap-2 text-xs font-medium text-[var(--bv-text-3)] mt-auto pt-8">
         <div>&copy; Antan Roy &middot; 2026</div>
         <div className="flex flex-col gap-1">
-          <a href="#" className="hover:text-white transition-colors">Licensing</a>
-          <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+          <a href="#" className="hover:text-[var(--bv-text)] transition-colors">Licensing</a>
+          <a href="#" className="hover:text-[var(--bv-text)] transition-colors">Privacy Policy</a>
+          <a href="#" className="hover:text-[var(--bv-text)] transition-colors">Cookie Policy</a>
         </div>
       </div>
     </motion.aside>
