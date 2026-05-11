@@ -8,7 +8,6 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 
-import { ThemeProvider } from "../hooks/useTheme";
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -113,9 +112,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
-        <Outlet />
-      </ThemeProvider>
+      <Outlet />
     </QueryClientProvider>
   );
 }
