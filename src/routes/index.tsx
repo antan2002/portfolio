@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
       },
     ],
   }),
@@ -42,8 +42,8 @@ const projects: Project[] = [
     name: "IntelliCart",
     short: "Personalized product recommendation system powered by Gemini Pro.",
     description: "A smart e-commerce platform that learns user preferences and surfaces hyper-relevant products in real time.",
-    full: "IntelliCart blends a MongoDB product catalog with Gemini Pro LLM-driven recommendations. The React frontend talks to a Node service that crafts contextual prompts from session behaviour, returning ranked product lists and natural-language explanations. Built for sub-second response with caching and streaming.",
-    tech: ["MongoDB", "React.js", "Node.js", "Gemini Pro"],
+    full: "IntelliCart blends a MongoDB product catalog with Gemini Pro LLM-driven recommendations. The React frontend talks to a Node service that crafts contextual prompts from session behaviour, returning ranked product lists and natural-language explanations.",
+    tech: ["MongoDB", "React", "Node", "Gemini"],
     status: "Live",
     type: "Full-Stack AI",
     year: "2025",
@@ -61,8 +61,8 @@ const projects: Project[] = [
     name: "AI Trip Generator",
     short: "AI-crafted travel itineraries tailored to budget, vibe and timeline.",
     description: "Plan a week abroad in 30 seconds — the AI assembles routes, stays and food spots aligned with your taste.",
-    full: "Users enter a destination, dates, budget and interests. A Node backend orchestrates GenAI calls to produce day-by-day itineraries, complete with travel times, restaurant picks, and packing tips. Saved trips persist in MongoDB and can be shared via a public link.",
-    tech: ["React.js", "Node.js", "MongoDB", "GenAI"],
+    full: "Users enter a destination, dates, budget and interests. A Node backend orchestrates GenAI calls to produce day-by-day itineraries, complete with travel times, restaurant picks, and packing tips.",
+    tech: ["React", "Node", "MongoDB", "GenAI"],
     status: "Live",
     type: "AI Web App",
     year: "2025",
@@ -80,8 +80,8 @@ const projects: Project[] = [
     name: "ChargeX",
     short: "Full-stack EV charger marketplace with Stripe checkout.",
     description: "End-to-end e-commerce for electric vehicle chargers: catalog, cart, payments, orders and admin.",
-    full: "ChargeX ships a production-ready EV charger storefront. React on the front, Node + Express on the back, Stripe for payments and webhooks for fulfilment. Admin tools manage inventory, orders and refunds. Designed mobile-first for on-the-road buyers.",
-    tech: ["React.js", "Node.js", "Stripe API"],
+    full: "ChargeX ships a production-ready EV charger storefront. React on the front, Node + Express on the back, Stripe for payments and webhooks for fulfilment.",
+    tech: ["React", "Node", "Stripe"],
     status: "Live",
     type: "E-Commerce",
     year: "2024",
@@ -96,11 +96,11 @@ const projects: Project[] = [
   },
   {
     id: "chess",
-    name: "Chess.com Clone",
+    name: "Chess Clone",
     short: "Real-time two-player chess powered by Socket.IO.",
     description: "Play live chess in the browser — full rules engine, room-based matchmaking and move sync under 50ms.",
-    full: "A from-scratch chess platform: drag-to-move UI, full legal-move validation (including castling and en passant), Socket.IO rooms for multiplayer, and a spectator mode. Server enforces move legality so clients can't cheat.",
-    tech: ["CSS", "Node.js", "Socket.IO"],
+    full: "A from-scratch chess platform: drag-to-move UI, full legal-move validation, Socket.IO rooms for multiplayer, and a spectator mode.",
+    tech: ["CSS", "Node", "Socket.IO"],
     status: "Live",
     type: "Realtime Game",
     year: "2024",
@@ -108,7 +108,7 @@ const projects: Project[] = [
       { title: "Live Multiplayer", body: "Socket.IO rooms with sub-50ms move sync." },
       { title: "Legal Moves Only", body: "Server-side rules engine prevents cheating." },
       { title: "Spectator Mode", body: "Watch ongoing games with replay scrubbing." },
-      { title: "Game History", body: "Every move logged in algebraic notation, exportable as PGN." },
+      { title: "Game History", body: "Every move logged in algebraic notation." },
     ],
     github: "https://github.com/antanroy",
     live: "#",
@@ -116,10 +116,10 @@ const projects: Project[] = [
   {
     id: "facebrain",
     name: "FaceBrain",
-    short: "Face detection web app using the Clarifai/Brain.io API.",
+    short: "Face detection web app using the Clarifai API.",
     description: "Upload an image, get bounding boxes around every face — auth, history and rate limiting included.",
-    full: "FaceBrain pairs a React frontend with a Node + PostgreSQL backend. Users sign up, submit image URLs, and the app calls a face-detection API to draw bounding boxes. Per-user submission count is tracked in Postgres for analytics and rate limiting.",
-    tech: ["React.js", "Node.js", "PostgreSQL"],
+    full: "FaceBrain pairs a React frontend with a Node + PostgreSQL backend. Users sign up, submit image URLs, and the app calls a face-detection API to draw bounding boxes.",
+    tech: ["React", "Node", "Postgres"],
     status: "Live",
     type: "Computer Vision",
     year: "2023",
@@ -134,11 +134,11 @@ const projects: Project[] = [
   },
   {
     id: "spacer",
-    name: "Spacer-main",
+    name: "Spacer",
     short: "Space-themed landing page with smooth parallax storytelling.",
     description: "A scroll-driven cinematic landing page using only HTML, CSS and vanilla JS — zero frameworks.",
-    full: "Spacer is a love letter to vanilla web tech. Layered parallax sections, GSAP-free scroll animations, and a hand-tuned starfield create a cinematic feel — all under 30KB of JS. Built as a study in performance and pure CSS craft.",
-    tech: ["React", "JavaScript", "HTML/CSS"],
+    full: "Spacer is a love letter to vanilla web tech. Layered parallax sections, GSAP-free scroll animations, and a hand-tuned starfield create a cinematic feel.",
+    tech: ["JS", "HTML", "CSS"],
     status: "Live",
     type: "Landing Page",
     year: "2023",
@@ -153,201 +153,182 @@ const projects: Project[] = [
   },
 ];
 
-const skills = ["C++", "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "MongoDB", "PostgreSQL", "Socket.io", "OpenAI", "Tailwind", "Express"];
-const coursework = ["DSA", "OS", "DBMS", "Computer Networks", "OOP", "System Design"];
-const experience = [
-  { role: "Software Engineer", org: "hrolled", date: "2025 — Present" },
-  { role: "Embedded Engineer", org: "C S to Green Energy", date: "2024" },
-  { role: "Summer Intern", org: "Goldman Sachs", date: "2024" },
-  { role: "Dev Intern", org: "Accenture", date: "2023" },
-  { role: "Contributor", org: "Google Summer of Code", date: "2023" },
+const stack = [
+  { name: "React", color: "#61DAFB", letter: "R" },
+  { name: "Node", color: "#3C873A", letter: "N" },
+  { name: "TS", color: "#3178C6", letter: "T" },
+  { name: "Mongo", color: "#10AA50", letter: "M" },
+  { name: "PG", color: "#336791", letter: "P" },
+  { name: "AI", color: "#A855F7", letter: "A" },
 ];
 
 function Portfolio() {
-  const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const [active, setActive] = useState<Project | null>(null);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [activeProject]);
+  }, [active]);
+
+  const now = new Date().toLocaleString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false }) +
+    " May 11, 2026";
 
   return (
     <>
       <style>{css}</style>
-      <div className="ar-root">
-        <Nav />
-        {activeProject ? (
-          <ProjectDetail project={activeProject} onBack={() => setActiveProject(null)} />
+      <div className="bv-root">
+        {active ? (
+          <Detail project={active} onBack={() => setActive(null)} />
         ) : (
-          <Main onOpen={setActiveProject} />
+          <Bento onOpen={setActive} now={now} />
         )}
       </div>
     </>
   );
 }
 
-function Nav() {
+function Bento({ onOpen, now }: { onOpen: (p: Project) => void; now: string }) {
   return (
-    <nav className="ar-nav">
-      <div className="ar-nav-inner">
-        <a href="#" className="ar-logo">AR.</a>
-        <div className="ar-nav-links">
-          <a href="#home">Home</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+    <main className="bv-shell">
+      {/* Top bar */}
+      <header className="bv-top">
+        <div className="bv-brand">
+          <div className="bv-avatar">AR</div>
+          <div className="bv-brand-text">
+            <div className="bv-name">ANTAN R.</div>
+            <div className="bv-role">SOFTWARE ENGINEER</div>
+          </div>
         </div>
-        <div className="ar-status"><span className="ar-dot" /> Open to work</div>
-      </div>
-    </nav>
-  );
-}
+        <div className="bv-time">{now}</div>
+        <button className="bv-menu" aria-label="Menu">≡</button>
+      </header>
 
-function Main({ onOpen }: { onOpen: (p: Project) => void }) {
-  return (
-    <main className="ar-grid" id="home">
-      {/* Hero */}
-      <section className="card hero" style={{ animationDelay: "0.05s" }}>
-        <div className="badge"><span className="ar-dot" /> Available for work</div>
-        <h1 className="hero-title">ANTAN<br />/ ROY</h1>
-        <p className="bio">
-          Full-stack software engineer crafting AI-powered web experiences. I love
-          turning fuzzy product ideas into shipped, performant interfaces — from
-          realtime systems to LLM-driven workflows.
-        </p>
-        <div className="hero-cta">
-          <a href="mailto:antan@example.com" className="btn">Email ↗</a>
-          <a href="https://github.com/antanroy" className="btn">GitHub ↗</a>
-          <a href="https://linkedin.com" className="btn">LinkedIn ↗</a>
-        </div>
-      </section>
+      <div className="bv-grid">
+        {/* Left rail */}
+        <aside className="bv-rail">
+          <p className="bv-bio">
+            I specialize in crafting AI-powered, performant web experiences. With a passion for clean architectures and fast feedback loops, I turn fuzzy product ideas into shipped, delightful interfaces across the modern web.
+          </p>
+          <button className="bv-pill-btn" onClick={() => onOpen(projects[0])}>More about Me</button>
+          <div className="bv-socials">
+            <a href="https://github.com/antanroy" className="bv-soc" aria-label="GitHub">G</a>
+            <a href="https://linkedin.com" className="bv-soc" aria-label="LinkedIn">in</a>
+            <a href="mailto:antan@example.com" className="bv-soc" aria-label="Email">@</a>
+          </div>
+          <div className="bv-foot">
+            <div>© Antan Roy · 2026</div>
+            <a href="#">Licensing</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </aside>
 
-      {/* Current Role */}
-      <section className="card role" style={{ animationDelay: "0.1s" }}>
-        <div className="kicker">CURRENT ROLE</div>
-        <div className="role-head">
-          <h3>hrolled</h3>
-          <span className="badge sm"><span className="ar-dot" /> Current</span>
-        </div>
-        <div className="meta-line">Software Engineer · 2025 — Present</div>
-        <p className="bio">Building AI-driven hiring tooling — LLM pipelines, realtime collab and a snappy React frontend.</p>
-      </section>
+        {/* Center: projects collage */}
+        <section className="bv-card bv-projects" onClick={() => onOpen(projects[0])}>
+          <div className="bv-mosaic">
+            {projects.slice(0, 6).map((p, i) => (
+              <button
+                key={p.id}
+                className={`bv-tile bv-tile-${i}`}
+                onClick={(e) => { e.stopPropagation(); onOpen(p); }}
+              >
+                <span className="bv-tile-name">{p.name}</span>
+              </button>
+            ))}
+          </div>
+          <span className="bv-card-cta" aria-hidden>↗</span>
+        </section>
 
-      {/* Skills */}
-      <section className="card skills" style={{ animationDelay: "0.15s" }}>
-        <div className="kicker">STACK</div>
-        <h3>Full-stack toolkit</h3>
-        <div className="pills">
-          {skills.map((s) => <span key={s} className="pill">{s}</span>)}
-        </div>
-      </section>
+        {/* Stack card */}
+        <section className="bv-card bv-stack">
+          <h3 className="bv-card-title bv-card-title-light">My Stack</h3>
+          <div className="bv-stack-row">
+            {stack.map((s) => (
+              <div key={s.name} className="bv-logo" style={{ background: s.color }}>{s.letter}</div>
+            ))}
+          </div>
+          <span className="bv-card-cta bv-cta-light" aria-hidden>↗</span>
+        </section>
 
-      {/* Divider */}
-      <div className="divider" id="projects">
-        <span className="line" /><span className="divider-text">MY PROJECTS</span><span className="line" />
-      </div>
-
-      {projects.map((p, i) => (
-        <article
-          key={p.id}
-          className="card project"
-          style={{ animationDelay: `${0.2 + i * 0.05}s` }}
-          onClick={() => onOpen(p)}
-        >
-          <div className="project-top">
-            <div className="icon-row">
-              <a href={p.github} onClick={(e) => e.stopPropagation()} className="icon-btn" aria-label="GitHub">⌥</a>
-              <a href={p.live} onClick={(e) => e.stopPropagation()} className="icon-btn" aria-label="Live">↗</a>
+        {/* Master / Current role */}
+        <section className="bv-card bv-master" onClick={() => onOpen(projects[1])}>
+          <div className="bv-master-screen">
+            <div className="bv-screen-bar">
+              <span /><span /><span />
             </div>
-            <div className="icon-btn arrow">→</div>
-          </div>
-          <div className="dot-img" />
-          <h3 className="project-name">{p.name}</h3>
-          <p className="project-desc">{p.short}</p>
-          <div className="pills">
-            {p.tech.map((t) => <span key={t} className="pill">{t}</span>)}
-          </div>
-        </article>
-      ))}
-
-      {/* About */}
-      <section className="card about" style={{ animationDelay: "0.5s" }}>
-        <div className="kicker">ABOUT</div>
-        <p className="bio">
-          CS student & engineer based in India. Obsessed with clean architectures,
-          fast feedback loops and the craft of UI.
-        </p>
-        <div className="stat">
-          <div className="stat-num">7.5</div>
-          <div className="stat-label">CGPA</div>
-        </div>
-        <div className="pills">
-          {coursework.map((c) => <span key={c} className="pill">{c}</span>)}
-        </div>
-      </section>
-
-      {/* Experience */}
-      <section className="card exp" style={{ animationDelay: "0.55s" }}>
-        <div className="kicker">EXPERIENCE</div>
-        <ul className="exp-list">
-          {experience.map((e) => (
-            <li key={e.role + e.org}>
-              <div>
-                <div className="exp-role">{e.role}</div>
-                <div className="exp-org">{e.org}</div>
+            <div className="bv-screen-body">
+              <div className="bv-screen-pane" />
+              <div className="bv-screen-main">
+                <div className="bv-screen-card">
+                  <div className="bv-screen-h">Empower</div>
+                  <div className="bv-screen-h">Your Engineering</div>
+                </div>
               </div>
-              <div className="exp-date">{e.date}</div>
-            </li>
-          ))}
-        </ul>
-      </section>
+            </div>
+          </div>
+          <h3 className="bv-master-title">Software Engineer</h3>
+          <span className="bv-card-cta" aria-hidden>↗</span>
+        </section>
 
-      {/* Contact */}
-      <section className="card contact" id="contact" style={{ animationDelay: "0.6s" }}>
-        <div className="kicker">CONTACT</div>
-        <h2 className="contact-title">GET IN<br />TOUCH</h2>
-        <p className="bio">Open to full-time roles, freelance and interesting collaborations.</p>
-        <div className="contact-links">
-          <a href="https://github.com/antanroy">GitHub ↗</a>
-          <a href="https://linkedin.com">LinkedIn ↗</a>
-          <a href="mailto:antan@example.com">Email ↗</a>
-        </div>
-      </section>
+        {/* Contact */}
+        <section className="bv-card bv-contact">
+          <h3 className="bv-card-title bv-card-title-dark">Contact</h3>
+          <div className="bv-globe" />
+          <a href="mailto:antan@example.com" className="bv-card-cta bv-cta-dark" aria-label="Contact">↗</a>
+        </section>
+
+        {/* Stats */}
+        <section className="bv-card bv-stats">
+          <div className="bv-stars">★★★★★</div>
+          <div className="bv-stat-num">7.5</div>
+          <div className="bv-stat-lbl">CGPA</div>
+          <div className="bv-avatars">
+            <span className="bv-av" style={{ background: "#22c55e" }}>A</span>
+            <span className="bv-av" style={{ background: "#3b82f6" }}>B</span>
+            <span className="bv-av" style={{ background: "#f97316" }}>C</span>
+          </div>
+        </section>
+      </div>
+
+      <div className="bv-status-fab">
+        <span className="bv-dot" /> Open to work
+      </div>
     </main>
   );
 }
 
-function ProjectDetail({ project, onBack }: { project: Project; onBack: () => void }) {
+function Detail({ project, onBack }: { project: Project; onBack: () => void }) {
   return (
-    <main className="ar-detail">
-      <button className="back-btn" onClick={onBack}>← Back</button>
-      <div className="kicker">{project.type}</div>
-      <h1 className="detail-title">{project.name}</h1>
-      <p className="detail-desc">{project.description}</p>
+    <main className="bv-detail">
+      <button className="bv-back" onClick={onBack}>← Back</button>
+      <div className="bv-kicker">{project.type}</div>
+      <h1 className="bv-detail-title">{project.name}</h1>
+      <p className="bv-detail-desc">{project.description}</p>
 
-      <div className="meta-row">
-        <span className="meta-pill"><span className="meta-key">Status</span> {project.status}</span>
-        <span className="meta-pill"><span className="meta-key">Type</span> {project.type}</span>
-        <span className="meta-pill"><span className="meta-key">Stack</span> {project.tech.join(" · ")}</span>
-        <span className="meta-pill"><span className="meta-key">Year</span> {project.year}</span>
+      <div className="bv-meta-row">
+        <span className="bv-meta-pill"><span className="bv-meta-key">Status</span> {project.status}</span>
+        <span className="bv-meta-pill"><span className="bv-meta-key">Type</span> {project.type}</span>
+        <span className="bv-meta-pill"><span className="bv-meta-key">Stack</span> {project.tech.join(" · ")}</span>
+        <span className="bv-meta-pill"><span className="bv-meta-key">Year</span> {project.year}</span>
       </div>
 
-      <div className="dot-img big" />
+      <div className="bv-cover" />
 
-      <h2 className="section-h">Features</h2>
-      <div className="features">
+      <h2 className="bv-section-h">Features</h2>
+      <div className="bv-features">
         {project.features.map((f) => (
-          <div key={f.title} className="card feat">
+          <div key={f.title} className="bv-card bv-feat">
             <h4>{f.title}</h4>
             <p>{f.body}</p>
           </div>
         ))}
       </div>
 
-      <h2 className="section-h">Overview</h2>
-      <p className="detail-full">{project.full}</p>
+      <h2 className="bv-section-h">Overview</h2>
+      <p className="bv-detail-full">{project.full}</p>
 
-      <div className="hero-cta">
-        <a href={project.live} className="btn">View Live ↗</a>
-        <a href={project.github} className="btn">GitHub ↗</a>
+      <div className="bv-cta-row">
+        <a href={project.live} className="bv-pill-btn">View Live ↗</a>
+        <a href={project.github} className="bv-pill-btn bv-pill-btn-ghost">GitHub ↗</a>
       </div>
     </main>
   );
@@ -355,139 +336,167 @@ function ProjectDetail({ project, onBack }: { project: Project; onBack: () => vo
 
 const css = `
 :root {
-  --bg: #080808;
-  --card: #0f0f0f;
-  --card-2: #161616;
-  --border: #2a2a2a;
-  --border-hi: #3d3d3d;
-  --text: #ededed;
-  --muted: #8a8a8a;
-  --green: #22c55e;
+  --bv-bg: #000000;
+  --bv-surface: #1d1d1d;
+  --bv-surface-2: #242424;
+  --bv-surface-3: #333333;
+  --bv-text: #ffffff;
+  --bv-text-2: #eeeeee;
+  --bv-text-3: #999999;
+  --bv-radius: 18px;
+  --bv-radius-sm: 8px;
+  --bv-shadow: rgba(0,0,0,0.2) 0 2px 4px 0;
+  --bv-blue: #2563eb;
+  --bv-orange: #f97316;
+  --bv-green: #22c55e;
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Space Mono', ui-monospace, monospace; -webkit-font-smoothing: antialiased; }
+html, body { margin: 0; padding: 0; background: var(--bv-bg); color: var(--bv-text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px; font-weight: 600; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
 
-.ar-root { min-height: 100vh; }
+.bv-root { min-height: 100vh; padding: 20px; }
+.bv-shell { max-width: 1280px; margin: 0 auto; }
 
-.ar-nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); background: rgba(8,8,8,0.7); border-bottom: 1px solid var(--border); }
-.ar-nav-inner { max-width: 1280px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.ar-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.25rem; letter-spacing: 0.02em; }
-.ar-nav-links { display: flex; gap: 28px; font-size: 0.85rem; color: var(--muted); }
-.ar-nav-links a:hover { color: var(--text); }
-.ar-status { font-size: 0.78rem; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+/* Top bar */
+.bv-top { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
+.bv-brand { display: flex; align-items: center; gap: 10px; background: var(--bv-surface); border-radius: 999px; padding: 7px 16px 7px 7px; }
+.bv-avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #60a5fa, #a78bfa); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; color: #0b0b0b; }
+.bv-brand-text { line-height: 1.1; }
+.bv-name { font-weight: 800; font-size: 13px; letter-spacing: 0.02em; }
+.bv-role { font-weight: 500; font-size: 10px; color: var(--bv-text-3); letter-spacing: 0.12em; }
+.bv-time { flex: 1; color: var(--bv-text-3); font-size: 12px; }
+.bv-menu { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--bv-surface-3); background: transparent; color: var(--bv-text); font-size: 16px; display: inline-flex; align-items: center; justify-content: center; }
 
-.ar-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(34,197,94,0.6); animation: pulse 2s infinite; }
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.6); }
-  70% { box-shadow: 0 0 0 8px rgba(34,197,94,0); }
-  100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+/* Grid */
+.bv-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  grid-template-areas:
+    "rail projects stack"
+    "rail projects master"
+    "rail contact stats"
+    "rail master2 master2";
 }
-
-.ar-grid { max-width: 1280px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; }
-
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 28px;
-  transition: border-color .25s ease, transform .25s ease, background .25s ease;
-  opacity: 0;
-  transform: translateY(12px);
-  animation: fadeUp .6s ease forwards;
-}
-.card:hover { border-color: var(--border-hi); transform: translateY(-2px); }
-@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-
-.hero { grid-column: span 7; grid-row: span 2; display: flex; flex-direction: column; gap: 18px; }
-.role { grid-column: span 5; }
-.skills { grid-column: span 5; }
-
-.badge { display: inline-flex; align-items: center; gap: 8px; font-size: 0.72rem; padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); width: fit-content; }
-.badge.sm { font-size: 0.68rem; padding: 4px 10px; }
-
-.hero-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.5rem, 7vw, 5rem); line-height: 0.95; margin: 0; letter-spacing: -0.02em; }
-.bio { color: var(--muted); font-size: 0.92rem; line-height: 1.65; margin: 0; max-width: 60ch; }
-.hero-cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
-.btn { padding: 10px 18px; border: 1px solid var(--border); border-radius: 999px; font-size: 0.82rem; transition: all .2s ease; }
-.btn:hover { border-color: var(--text); background: var(--card-2); }
-
-.kicker { font-size: 0.7rem; letter-spacing: 0.18em; color: var(--muted); text-transform: uppercase; margin-bottom: 14px; }
-.role h3, .skills h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.5rem; margin: 0 0 6px; }
-.role-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.meta-line { color: var(--muted); font-size: 0.78rem; margin: 6px 0 14px; }
-
-.pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
-.pill { font-size: 0.72rem; padding: 5px 11px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); background: var(--card-2); }
-
-.divider { grid-column: span 12; display: flex; align-items: center; gap: 18px; margin: 24px 0 4px; }
-.divider .line { flex: 1; height: 1px; background: var(--border); }
-.divider-text { font-family: 'Syne', sans-serif; font-weight: 700; letter-spacing: 0.2em; font-size: 0.85rem; color: var(--muted); }
-
-.project { grid-column: span 4; cursor: pointer; display: flex; flex-direction: column; gap: 12px; }
-.project-top { display: flex; justify-content: space-between; align-items: center; }
-.icon-row { display: flex; gap: 6px; }
-.icon-btn { width: 32px; height: 32px; border: 1px solid var(--border); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.85rem; color: var(--muted); background: var(--card-2); transition: all .2s ease; }
-.icon-btn:hover { color: var(--text); border-color: var(--text); }
-.icon-btn.arrow { font-size: 1rem; }
-
-.dot-img {
-  width: 100%; aspect-ratio: 16 / 10; border-radius: 12px; border: 1px solid var(--border);
-  background:
-    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0) 0 0 / 14px 14px,
-    linear-gradient(135deg, #111 0%, #1a1a1a 100%);
-}
-.dot-img.big { aspect-ratio: 21 / 9; margin: 24px 0; }
-
-.project-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.35rem; margin: 4px 0 0; }
-.project-desc { color: var(--muted); font-size: 0.85rem; line-height: 1.55; margin: 0; }
-
-.about { grid-column: span 4; }
-.exp { grid-column: span 4; }
-.contact { grid-column: span 4; }
-
-.stat { margin: 18px 0; }
-.stat-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 3rem; line-height: 1; }
-.stat-label { font-size: 0.72rem; letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; margin-top: 4px; }
-
-.exp-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
-.exp-list li { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
-.exp-list li:last-child { border-bottom: none; padding-bottom: 0; }
-.exp-role { font-size: 0.92rem; }
-.exp-org { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
-.exp-date { font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
-
-.contact-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 2.4rem; line-height: 0.95; margin: 0 0 12px; letter-spacing: -0.02em; }
-.contact-links { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
-.contact-links a { font-size: 0.9rem; padding: 12px 16px; border: 1px solid var(--border); border-radius: 12px; transition: all .2s ease; }
-.contact-links a:hover { border-color: var(--text); background: var(--card-2); }
-
-/* Detail */
-.ar-detail { max-width: 1080px; margin: 0 auto; padding: 32px 24px 80px; animation: fadeUp .5s ease; opacity: 0; animation-fill-mode: forwards; }
-.back-btn { background: transparent; color: var(--muted); border: 1px solid var(--border); padding: 8px 16px; border-radius: 999px; font-family: inherit; font-size: 0.8rem; cursor: pointer; margin-bottom: 32px; transition: all .2s; }
-.back-btn:hover { color: var(--text); border-color: var(--text); }
-.detail-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1; letter-spacing: -0.02em; margin: 8px 0 18px; }
-.detail-desc { color: var(--muted); font-size: 1.05rem; line-height: 1.6; max-width: 70ch; }
-.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
-.meta-pill { font-size: 0.78rem; padding: 8px 14px; border: 1px solid var(--border); border-radius: 999px; color: var(--text); background: var(--card); }
-.meta-key { color: var(--muted); margin-right: 8px; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; }
-.section-h { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.5rem; margin: 36px 0 16px; }
-.features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-.feat h4 { font-family: 'Syne', sans-serif; margin: 0 0 8px; font-size: 1.05rem; }
-.feat p { color: var(--muted); font-size: 0.85rem; line-height: 1.55; margin: 0; }
-.detail-full { color: var(--muted); font-size: 0.95rem; line-height: 1.7; max-width: 75ch; }
 
 @media (max-width: 1024px) {
-  .hero { grid-column: span 12; grid-row: auto; }
-  .role, .skills { grid-column: span 6; }
-  .project { grid-column: span 6; }
-  .about, .exp, .contact { grid-column: span 6; }
+  .bv-grid { grid-template-columns: 1fr 1fr; grid-template-areas:
+    "rail rail"
+    "projects projects"
+    "stack master"
+    "contact stats"; }
 }
 @media (max-width: 640px) {
-  .ar-nav-links { display: none; }
-  .card { padding: 22px; }
-  .ar-grid { padding: 16px; gap: 10px; }
-  .hero, .role, .skills, .project, .about, .exp, .contact { grid-column: span 12; }
-  .features { grid-template-columns: 1fr; }
+  .bv-grid { grid-template-columns: 1fr; grid-template-areas:
+    "rail" "projects" "stack" "master" "contact" "stats"; }
+}
+
+/* Left rail */
+.bv-rail { grid-area: rail; padding: 10px 4px; display: flex; flex-direction: column; gap: 20px; }
+.bv-bio { color: var(--bv-text-2); font-weight: 500; font-size: 13px; line-height: 1.55; margin: 0; }
+.bv-pill-btn { background: var(--bv-surface-2); color: var(--bv-text); border: 1px solid var(--bv-surface-3); border-radius: 999px; padding: 10px 18px; font-size: 12px; font-weight: 600; transition: background 200ms, border-color 200ms; width: fit-content; }
+.bv-pill-btn:hover, .bv-pill-btn:focus-visible { background: var(--bv-surface-3); outline: none; border-color: var(--bv-text-3); }
+.bv-pill-btn-ghost { background: transparent; }
+.bv-socials { display: flex; gap: 7px; }
+.bv-soc { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--bv-surface-3); display: inline-flex; align-items: center; justify-content: center; font-size: 12px; color: var(--bv-text-2); transition: all 200ms; }
+.bv-soc:hover { background: var(--bv-surface-2); color: var(--bv-text); }
+.bv-foot { display: flex; flex-direction: column; gap: 7px; color: var(--bv-text-3); font-size: 12px; font-weight: 500; margin-top: auto; padding-top: 30px; }
+.bv-foot a:hover { color: var(--bv-text); }
+
+/* Card base */
+.bv-card { position: relative; background: var(--bv-surface); border-radius: var(--bv-radius); padding: 20px; box-shadow: var(--bv-shadow); overflow: hidden; transition: transform 200ms, background 200ms; opacity: 0; transform: translateY(8px); animation: bvFade 0.5s ease forwards; }
+.bv-card:hover { transform: translateY(-2px); }
+@keyframes bvFade { to { opacity: 1; transform: translateY(0); } }
+
+.bv-card-title { font-size: 22px; font-weight: 700; margin: 0 0 14px; letter-spacing: -0.01em; }
+.bv-card-title-light { color: #fff; }
+.bv-card-title-dark { color: #0a0a0a; }
+.bv-card-cta { position: absolute; right: 14px; bottom: 14px; width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,0.95); color: #000; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
+.bv-cta-light { background: rgba(255,255,255,0.95); color: #1e3a8a; }
+.bv-cta-dark { background: #0a0a0a; color: #fff; }
+
+/* Projects mosaic */
+.bv-projects { grid-area: projects; min-height: 380px; cursor: pointer; padding: 14px; background: #0a0a0a; }
+.bv-mosaic { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 8px; height: 100%; min-height: 360px; }
+.bv-tile { border: none; border-radius: 10px; padding: 12px; color: #fff; font-weight: 700; font-size: 13px; text-align: left; display: flex; align-items: flex-end; cursor: pointer; transition: transform 200ms, filter 200ms; }
+.bv-tile:hover, .bv-tile:focus-visible { transform: scale(1.02); filter: brightness(1.15); outline: none; }
+.bv-tile-name { background: rgba(0,0,0,0.55); padding: 4px 8px; border-radius: 6px; font-size: 11px; }
+.bv-tile-0 { grid-column: span 1; grid-row: span 2; background: linear-gradient(135deg, #1e293b, #334155); }
+.bv-tile-1 { background: linear-gradient(135deg, #422006, #78350f); }
+.bv-tile-2 { background: linear-gradient(135deg, #1f2937, #111827); }
+.bv-tile-3 { grid-column: span 2; background: linear-gradient(135deg, #4c1d95, #7c3aed); }
+.bv-tile-4 { background: linear-gradient(135deg, #064e3b, #047857); }
+.bv-tile-5 { grid-column: span 2; background: linear-gradient(135deg, #831843, #be185d); }
+
+/* Stack card */
+.bv-stack { grid-area: stack; background: var(--bv-blue); min-height: 180px; }
+.bv-stack-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.bv-logo { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.25); border: 2px solid rgba(255,255,255,0.2); }
+
+/* Master card */
+.bv-master { grid-area: master; min-height: 220px; cursor: pointer; background: var(--bv-surface); }
+.bv-master-screen { background: #0a0a0a; border-radius: 10px; padding: 8px; margin-bottom: 14px; border: 1px solid var(--bv-surface-3); }
+.bv-screen-bar { display: flex; gap: 4px; margin-bottom: 8px; }
+.bv-screen-bar span { width: 8px; height: 8px; border-radius: 50%; background: var(--bv-surface-3); }
+.bv-screen-body { display: flex; gap: 6px; min-height: 90px; }
+.bv-screen-pane { width: 28%; background: var(--bv-surface-2); border-radius: 6px; }
+.bv-screen-main { flex: 1; background: var(--bv-surface-2); border-radius: 6px; display: flex; align-items: center; justify-content: center; padding: 10px; }
+.bv-screen-card { background: linear-gradient(135deg, #ec4899, #8b5cf6); padding: 10px 14px; border-radius: 8px; }
+.bv-screen-h { font-size: 11px; font-weight: 700; color: #fff; line-height: 1.2; }
+.bv-master-title { font-family: Inter; font-size: 26px; font-weight: 800; margin: 0; letter-spacing: -0.02em; }
+
+/* Contact */
+.bv-contact { grid-area: contact; background: var(--bv-orange); min-height: 200px; }
+.bv-contact .bv-card-title-dark { color: #1a1a1a; }
+.bv-globe { position: absolute; right: -20px; bottom: -20px; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #1f2937, #0a0a0a 70%);
+  box-shadow: inset -10px -10px 30px rgba(0,0,0,0.6);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0),
+    radial-gradient(circle at 35% 35%, #1f2937, #0a0a0a 70%);
+  background-size: 8px 8px, 100% 100%;
+}
+
+/* Stats */
+.bv-stats { grid-area: stats; background: #0a0a0a; min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; }
+.bv-stars { color: #facc15; font-size: 14px; letter-spacing: 2px; }
+.bv-stat-num { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; }
+.bv-stat-lbl { font-size: 11px; letter-spacing: 0.18em; color: var(--bv-text-3); text-transform: uppercase; }
+.bv-avatars { display: flex; gap: -6px; margin-top: 8px; }
+.bv-av { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0a0a0a; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 11px; color: #0a0a0a; margin-left: -8px; }
+.bv-av:first-child { margin-left: 0; }
+
+/* Status FAB */
+.bv-status-fab { position: fixed; right: 20px; bottom: 20px; background: var(--bv-surface); border: 1px solid var(--bv-surface-3); border-radius: 999px; padding: 8px 14px; font-size: 12px; color: var(--bv-text-2); display: flex; align-items: center; gap: 8px; z-index: 50; box-shadow: var(--bv-shadow); }
+.bv-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bv-green); box-shadow: 0 0 0 0 rgba(34,197,94,0.6); animation: bvPulse 2s infinite; }
+@keyframes bvPulse { 0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.6); } 70% { box-shadow: 0 0 0 8px rgba(34,197,94,0); } 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); } }
+
+/* Detail */
+.bv-detail { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; animation: bvFade .5s ease forwards; opacity: 0; }
+.bv-back { background: transparent; color: var(--bv-text-3); border: 1px solid var(--bv-surface-3); padding: 8px 16px; border-radius: 999px; font-size: 12px; margin-bottom: 24px; }
+.bv-back:hover { color: var(--bv-text); border-color: var(--bv-text-3); }
+.bv-kicker { font-size: 11px; letter-spacing: 0.18em; color: var(--bv-text-3); text-transform: uppercase; margin-bottom: 8px; }
+.bv-detail-title { font-size: clamp(36px, 6vw, 64px); font-weight: 800; margin: 0 0 16px; letter-spacing: -0.02em; line-height: 1; }
+.bv-detail-desc { color: var(--bv-text-3); font-weight: 500; font-size: 15px; line-height: 1.6; max-width: 70ch; }
+.bv-meta-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+.bv-meta-pill { font-size: 12px; padding: 8px 14px; border: 1px solid var(--bv-surface-3); border-radius: 999px; color: var(--bv-text); background: var(--bv-surface); }
+.bv-meta-key { color: var(--bv-text-3); margin-right: 8px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+.bv-cover { width: 100%; aspect-ratio: 21 / 9; border-radius: 14px; margin: 24px 0; background:
+  radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0) 0 0 / 14px 14px,
+  linear-gradient(135deg, #111 0%, #1a1a1a 100%); }
+.bv-section-h { font-size: 20px; font-weight: 700; margin: 36px 0 14px; }
+.bv-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.bv-feat h4 { margin: 0 0 6px; font-size: 14px; font-weight: 700; }
+.bv-feat p { color: var(--bv-text-3); font-weight: 500; font-size: 12px; line-height: 1.55; margin: 0; }
+.bv-detail-full { color: var(--bv-text-3); font-weight: 500; font-size: 13px; line-height: 1.7; max-width: 75ch; }
+.bv-cta-row { display: flex; gap: 8px; margin-top: 24px; }
+
+@media (max-width: 640px) {
+  .bv-features { grid-template-columns: 1fr; }
+  .bv-top { flex-wrap: wrap; }
+  .bv-time { order: 3; flex-basis: 100%; }
 }
 `;
