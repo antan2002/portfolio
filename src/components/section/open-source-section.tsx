@@ -20,7 +20,7 @@ export default function OpenSourceSection() {
           <div className="flex flex-col gap-y-3 items-center justify-center">
             <BlurFade delay={BLUR_FADE_DELAY * 2}>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-center">Open Source Contributions{" "}
-                <span className="inline-flex items-center rounded-md border px-3 py-0.5 text-sm font-bold text-foreground align-middle ml-3">
+                <span className="hidden sm:inline-flex items-center rounded-md border px-3 py-0.5 text-sm font-bold text-foreground align-middle ml-3">
                   {DATA.openSource.length}
                 </span>
               </h2>
